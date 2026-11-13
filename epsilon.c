@@ -6,7 +6,6 @@ int visited[20];
 
 void epsilonClosure(int state){
 	visited[state] = 1;
-	transitions[state][state] = 1;
 	for(int i=0;i<n;i++){
 		if(transitions[state][i] == 1 && visited[i] == 0){
 			epsilonClosure(i);
